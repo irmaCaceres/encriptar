@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #FFFFFF;
+    --color-secundario: #D8DFE8;
+    --color-terciario: #0A3871;
+    --color-cuaternario: #9B9797;
+    --color-quinario: #E8E8E8;
+    --color-senario: #000000;
+    --color-septenrio: #F3F5FC;
+    --color-octenario: #495057;
+
+    --fuente: "Montserrat", sans-serif;
+}
+
+body{
+    background-color: var(--color-septenrio);
+    font-family: var(--fuente);
+    font-size: 1rem;
+}
+
+.contenedor{
+    display: flex;
+    gap: 5%;
+    padding: 1.5% 3%;
+}
+
+.input{
+    margin-top: 5%;
+    margin-left: 17%;
+}
+
+textarea {
+    color: var(--color-terciario);
+    background-color: var(--color-septenrio);
+    width: 100%; /* Ancho completo del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    border: none; /* Sin bordes */
+    outline: none; /* Sin contorno al hacer clic */
+    resize: none; /* Deshabilita el redimensionamiento manual */
+    overflow: hidden; /* Oculta el desbordamiento */
+    font-size: 2rem; /* Ajusta el tamaño de fuente según tus necesidades */
+    padding: 1%; /* Espacio interior para el texto */
+    line-height: 1.5; /* Altura de línea para mejorar la legibilidad */
+    font-family: var(--fuente);
+}
+
+textarea:focus {
+    border: none; /* Asegura que no aparezcan bordes en el foco */
+    outline: none; /* Asegura que no aparezcan contornos en el foco */
+}
+
+
+.contenedor_advertencia_botones{
+    margin: 40% 0 0 5%;
+}
+
+.contenedor_advertiencia{
+    display: flex;
+    justify-content: left;
+    gap: 1%;
+    color: var(--color-octenario);
+    font-size: 0.75rem;
+}
+
+.icono{
+    margin-top: 2%;
+}
+
+.contenedor_botones{
+    display: flex;
+    gap: 3%;
+}
+
+button{
+    border-radius: 24px;
+    width: 25em;
+    height: 5em;
+}
+
+.encriptar{
+    background-color: var(--color-terciario);
+    color: var(--color-primario);
+    border: none;
+}
+
+.desencriptar_copiar{
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
+    border: 1px solid var(--color-terciario);
+}
+
+#texto_a_encriptar{
+    background-color: var(--color-primario);
+    border-radius: 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95%;
+    height: 105%;
+    
+}
+
+#texto_encriptado{
+    padding: 1.15em 2em;
+    text-align: center;
+    background-color: var(--color-primario);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    height: 98%;
+    justify-content: space-between;
+}
+
+#muñeco{
+    width: 80%;
+    height: 50%;
+    margin: 0 10% 3% 10%;
+}
+
+@media (max-width: 768px){
+
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        padding: 8% 0.5% 2% 0.5%;
+    }
+
+    #logo{
+        width: 20%;
+    }
+
+    .input{
+        margin-top: 6%;
+        margin-left: 6%;
+    }
+
+    .contenedor_advertencia_botones{
+        margin: 60% 5% 5% 5%;
+    }
+
+    
+    #texto_a_encriptar{
+        margin: 0 2%;
+    }
+
+    #copiar{
+        width: 100%;
+        margin: auto;
+    }
+
+    #muñeco{
+        display: none;
+    }
+}
+
+@media (max-width: 480px){
+
+    .contenedor_botones{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .contenedor_advertencia_botones{
+        margin: 85% 2% 5% 2%;
+    }
+
+    button{
+        width: 30em;
+    }
+}
